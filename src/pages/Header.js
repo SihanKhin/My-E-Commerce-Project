@@ -30,9 +30,9 @@ const Header = () => {
          </section>
          <section className='md:flex hidden flex-row justify-center items-center w-3/5'>
               <ul className='flex list-none cursor-pointer text-xl '>
-                <li className=' ml-10 hover:underline decoration-2 decoration-sky-500 mr-5'>
-                  <Link to='/'>Home</Link>
-                  </li>
+              <Link to='/'><li className=' ml-10 hover:underline decoration-2 decoration-sky-500 mr-5'>
+                  Home
+                  </li></Link>
                  {/* <li className=' ml-5 hover:underline decoration-2  decoration-sky-500'>
                   <Link to="/men">Men</Link>
                  </li>
@@ -53,10 +53,10 @@ const Header = () => {
                      </button>
                         <nav className={`flex justify-start items-center bg-white w-24 absolute rotate top-8 transition-transform duration-100 ${hidden}`}>
                               <ul className='w-full rounded'>
-                               <li className='hover:bg-slate-200  rounded-md text-base p-1'><Link to='/men/'>Men</Link></li>
-                               <li className='hover:bg-slate-200 rounded-md text-base p-1'><Link to='/women'>Women</Link></li>
-                               <li className='hover:bg-slate-200 rounded-md text-base p-1'><Link to='/electronic'>Electronic</Link></li>    
-                               <li className='hover:bg-slate-200 rounded-md text-base p-1'><Link to='/jewelery'>Jewelery</Link></li>    
+                              <Link to='/men/'><li className='hover:bg-slate-200  rounded-md text-base p-1'>Men</li></Link>
+                              <Link to='/women'> <li className='hover:bg-slate-200 rounded-md text-base p-1'>Women</li></Link>
+                              <Link to='/electronic'><li className='hover:bg-slate-200 rounded-md text-base p-1'>Electronic</li></Link>    
+                              <Link to='/jewelery'><li className='hover:bg-slate-200 rounded-md text-base p-1'>Jewelery</li></Link>    
                              </ul> 
                         </nav>
                  </nav>  
