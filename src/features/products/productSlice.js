@@ -108,6 +108,8 @@ export const allMenProduct = (state) =>
 state.products.products.filter(pro=>pro.category === "men's clothing");
 export const allWomenProduct = (state) =>
 state.products.products.filter(pro=>pro.category === "women's clothing");
+export const allElectronicProduct = (state) =>
+state.products.products.filter(pro=>pro.category === "electronics");
 export const getCart = (state)=>state.products.cart;
 export const getProductById = (state,id)=>state.products.products.find(pro=>pro.id === id)
 export default productSlice.reducer

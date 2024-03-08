@@ -9,6 +9,7 @@ import MenProducts from './pages/MenProducts';
 import WomenProducts from './pages/WomenProducts';
 import About from './pages/About';
 import ProductDetails from './pages/ProductDetails';
+import ElectronicProducts from './pages/ElectronicProducts'
 function App() {
   return (
     <div className="flex flex-grow flex-col justify-center items-center min-h-screen">
@@ -21,6 +22,7 @@ function App() {
               <Route path='/cart' element={<Cart />} />
               <Route path='/men' element={<MenProducts />}/>
               <Route path='/women' element={<WomenProducts />} />
+              <Route path='/electronic' element={<ElectronicProducts />} />
               <Route path='/about' element={<About />} />
               
             </Routes>

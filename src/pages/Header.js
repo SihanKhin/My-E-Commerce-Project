@@ -6,6 +6,12 @@ const Header = () => {
     const handleOpenSideBar = ()=>{
          setOpen(!open);
     }
+    const [isOpen,setIsOpen] = useState(false);
+    const handleOpen = ()=>{
+          setIsOpen(!isOpen)
+    }
+    const hidden = isOpen ? 'translate-y-0' : '-translate-y-40';
+    const svg = isOpen ? 'rotate-180' : 'rotate-0'
   return (
     <>
     <header className=' h-20 sticky mt-0 w-full fixed top-0 z-50
@@ -24,15 +30,35 @@ const Header = () => {
          </section>
          <section className='md:flex hidden flex-row justify-center items-center w-3/5'>
               <ul className='flex list-none cursor-pointer text-xl '>
-                <li className=' ml-10 hover:underline decoration-2 decoration-sky-500'>
+                <li className=' ml-10 hover:underline decoration-2 decoration-sky-500 mr-5'>
                   <Link to='/'>Home</Link>
                   </li>
-                 <li className=' ml-5 hover:underline decoration-2  decoration-sky-500'>
+                 {/* <li className=' ml-5 hover:underline decoration-2  decoration-sky-500'>
                   <Link to="/men">Men</Link>
                  </li>
                  <li className=' ml-5 hover:underline decoration-2  decoration-sky-500'>
                   <Link to="/women">Women</Link>
-                 </li>
+                 </li> */}
+                   <nav className='hidden relative md:flex flex-col justify-center items-center '>
+                     <button
+                   // ​​ onMouseEnter={handleOpen}
+                      /* onMouseLeave={handleOpen} */
+                       onClick={handleOpen} 
+                     className='flex flex-row justify-between items-center'>
+                         <span className='ml-1 font-Roboto text-xl'>Products</span>
+                          <svg className={  `h-3 transition-transform duration-300 ${svg}`} xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="m4.5 15.75 7.5-7.5 7.5 7.5" />
+                            </svg>
+
+                     </button>
+                        <nav className={`flex justify-start items-center bg-white w-24 absolute rotate top-8 transition-transform duration-100 ${hidden}`}>
+                              <ul className='w-full rounded'>
+                               <li className='hover:bg-slate-200  rounded-md text-base p-1'><Link to='/men'>Men</Link></li>
+                               <li className='hover:bg-slate-200 rounded-md text-base p-1'><Link to='/women'>Women</Link></li>
+                               <li className='hover:bg-slate-200 rounded-md text-base p-1'><Link to='electronic'>Electronic</Link></li>    
+                             </ul> 
+                        </nav>
+                 </nav>  
                 <li className=' ml-5 hover:underline decoration-2  decoration-sky-500'>
                   <Link to='/cart'>Cart</Link>
                 </li>
