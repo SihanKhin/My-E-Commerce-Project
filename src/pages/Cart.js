@@ -170,13 +170,13 @@ const CheckoutForm = () => {
                              </div>
                   
                                <form class="   mt-4 w-11/12 mx-auto flex flex-col justify-start items-start md:w-11/12">
-                                      <label for="countries" class="mb-2 font-Roboto text-sm font-normal text-black">
+                                      <label htmlFor="countries" className="mb-2 font-Roboto text-sm font-normal text-black">
                               
                                         SHIPPING</label>
                                       <select id="countries" 
                                          value={value}
                                          onChange={handleValue}
-                                      class="bg-white border h-10  outline-none border-white text-gray-900 text-sm rounded-sm focus:text-black focus:border-black w-11/12">
+                                      className="bg-white border h-10  outline-none border-white text-gray-900 text-sm rounded-sm focus:text-black focus:border-black w-11/12">
                                         <option value={0}>None</option>
                                         <option value={5.00}>$5.00</option>
                                         <option value={10.00}>$10.00</option>

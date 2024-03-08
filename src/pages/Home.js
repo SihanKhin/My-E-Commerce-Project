@@ -18,7 +18,7 @@ const Home = () => {
               We're Ready to serve our customers.
             </span>
          </section>
-          <section className='w-80 w-80 md:w-96 md:h-80'>
+          <section className='w-80  md:w-96 md:h-80'>
                  <img className=' object-cover md:h-80' src={img1} alt="" />
           </section>
          </nav>
