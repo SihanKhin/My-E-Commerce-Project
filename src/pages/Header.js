@@ -31,7 +31,7 @@ const Header = () => {
          <section className='md:flex hidden flex-row justify-center items-center w-3/5'>
               <ul className='flex list-none cursor-pointer text-xl '>
                 <li className=' ml-10 hover:underline decoration-2 decoration-sky-500 mr-5'>
-                  <Link to='/home'>Home</Link>
+                  <Link to='/'>Home</Link>
                   </li>
                  {/* <li className=' ml-5 hover:underline decoration-2  decoration-sky-500'>
                   <Link to="/men">Men</Link>

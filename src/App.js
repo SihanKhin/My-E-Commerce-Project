@@ -17,7 +17,7 @@ function App() {
          <Header />
          {/* <Sidebar /> */}
             <Routes>
-              <Route path='/home' element={<Home />}/>
+              <Route path='/' element={<Home />}/>
               <Route path='/products' element={<Products />}/>
               <Route path='/products/:proId' element={<ProductDetails/>} />
               <Route path='/cart' element={<Cart />} />
