@@ -11,7 +11,7 @@ const Products = () => {
     const dispatch = useDispatch();
     const product = useSelector(getAllProducts);
     const filterdProduct = product.filter(pros=>pros.category ==="men's clothing" || pros.category==="women's clothing" 
-    /* || pros.category==="electronics" */);
+     || pros.category==="electronics" || pros.category ==="jewelery");
 
     useEffect(()=>{
         dispatch(fetchProducts());

@@ -27,11 +27,11 @@ const ProductDetails = () => {
     <main className='flex flex-grow justify-start items-center w-full flex-col
      bg-gray-300'>
              <div className='flex flex-col w-11/12 md:w-11/12 md:mt-10  mt-2 pb-2 md:pb-10 md:flex-row rounded-sm justify-center items-center bg-slate-50'>
-                  <div className='w-60  h-60 md:ml-4 md:h-1/2 md:w-1/2 md:mt-2'>
+                  <div className='w-40 h-40 mt-5 md:ml-4 md:h-1/2 md:w-1/2 md:mt-2'>
                       <img src={product.image} className=' object-cover' alt="image" />
                   </div>
                       <div className='flex flex-col justify-center items-center w-11/12 mt-6 ml-3 '>
-                            <div  className='flex flex-col justify-center mt-2 mb-2 items-center w-11/12 md:mb-20 pt-20'>                               
+                            <div  className='flex flex-col justify-center mt-5 mb-2 items-center w-11/12 md:mb-20 pt-20'>                               
                             <span className='text-3xl md:text-6xl font-Roboto font-medium'>
                             {product.title}
                             </span>

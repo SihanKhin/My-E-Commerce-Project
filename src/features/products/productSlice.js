@@ -1,4 +1,5 @@
 import { createSlice,createAsyncThunk } from "@reduxjs/toolkit";
+import { createSelector } from "@reduxjs/toolkit";
 import axios from "axios";
 
 const initialState = {
@@ -103,13 +104,30 @@ const  productSlice = createSlice({
       
     }
 })
+
+
+/* state.products.products.filter(pro=>pro.category === "electronics"); */
 export const getAllProducts = (state)=>state.products.products;
-export const allMenProduct = (state) =>
-state.products.products.filter(pro=>pro.category === "men's clothing");
-export const allWomenProduct = (state) =>
-state.products.products.filter(pro=>pro.category === "women's clothing");
-export const allElectronicProduct = (state) =>
-state.products.products.filter(pro=>pro.category === "electronics");
+export const allElectronicProduct = createSelector (
+  getAllProducts, products=>products.filter(pro=>pro.category ==="electronics")
+);
+export const allMenProduct = createSelector (
+  getAllProducts, products=>products.filter(pro=>pro.category ==="men's clothing")
+);
+export const allWomenProduct = createSelector (
+  getAllProducts, products=>products.filter(pro=>pro.category ==="women's clothing")
+);
+export const alljeweleryProducts = createSelector (
+  getAllProducts, products=>products.filter(pro=>pro.category ==="jewelery")
+);
+/* export const allMenProduct = (state) =>
+state.products.products.filter(pro=>pro.category === "men's clothing"); */
+/* export const allWomenProduct = (state) =>
+state.products.products.filter(pro=>pro.category === "women's clothing"); */
+/* export const allElectronicProduct = (state) =>
+state.products.products.filter(pro=>pro.category === "electronics"); */
+/* export const alljeweleryProducts = (state) =>
+state.products.products.filter(pro=>pro.category === "jewelery"); */
 export const getCart = (state)=>state.products.cart;
 export const getProductById = (state,id)=>state.products.products.find(pro=>pro.id === id)
 export default productSlice.reducer

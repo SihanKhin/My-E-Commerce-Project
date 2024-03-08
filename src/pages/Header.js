@@ -10,7 +10,7 @@ const Header = () => {
     const handleOpen = ()=>{
           setIsOpen(!isOpen)
     }
-    const hidden = isOpen ? 'translate-y-0' : '-translate-y-40';
+    const hidden = isOpen ? 'translate-y-0' : '-translate-y-80';
     const svg = isOpen ? 'rotate-180' : 'rotate-0'
   return (
     <>
@@ -31,7 +31,7 @@ const Header = () => {
          <section className='md:flex hidden flex-row justify-center items-center w-3/5'>
               <ul className='flex list-none cursor-pointer text-xl '>
                 <li className=' ml-10 hover:underline decoration-2 decoration-sky-500 mr-5'>
-                  <Link to='/'>Home</Link>
+                  <Link to='/home'>Home</Link>
                   </li>
                  {/* <li className=' ml-5 hover:underline decoration-2  decoration-sky-500'>
                   <Link to="/men">Men</Link>
@@ -53,9 +53,10 @@ const Header = () => {
                      </button>
                         <nav className={`flex justify-start items-center bg-white w-24 absolute rotate top-8 transition-transform duration-100 ${hidden}`}>
                               <ul className='w-full rounded'>
-                               <li className='hover:bg-slate-200  rounded-md text-base p-1'><Link to='/men'>Men</Link></li>
+                               <li className='hover:bg-slate-200  rounded-md text-base p-1'><Link to='/men/'>Men</Link></li>
                                <li className='hover:bg-slate-200 rounded-md text-base p-1'><Link to='/women'>Women</Link></li>
-                               <li className='hover:bg-slate-200 rounded-md text-base p-1'><Link to='electronic'>Electronic</Link></li>    
+                               <li className='hover:bg-slate-200 rounded-md text-base p-1'><Link to='/electronic'>Electronic</Link></li>    
+                               <li className='hover:bg-slate-200 rounded-md text-base p-1'><Link to='/jewelery'>Jewelery</Link></li>    
                              </ul> 
                         </nav>
                  </nav>  

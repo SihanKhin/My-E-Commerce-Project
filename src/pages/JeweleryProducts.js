@@ -1,27 +1,26 @@
-
 import React, { useEffect } from 'react'
-import { allWomenProduct } from '../features/products/productSlice';
+import { alljeweleryProducts } from '../features/products/productSlice';
 import { useDispatch, useSelector } from 'react-redux';
 import { fetchProducts } from '../features/products/productSlice';
 import { addToCart } from '../features/products/productSlice';
 import { Link } from 'react-router-dom';
-const WomenProducts = () => {
+const MenProducts = () => {
   const dispatch = useDispatch();
-  const womenProduct = useSelector(allWomenProduct);
+  const JeweleryProduct = useSelector(alljeweleryProducts);
   useEffect(()=>{
     dispatch(fetchProducts())
   },[dispatch]);
+
   const addtocart = ({id,title,image,price})=>{
     dispatch(addToCart({id:id,title:title,image:image,price:price}));  
     console.log('added to cart.')
 }
   return (
     <main className='grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 
-    xl:grid-cols-5 w-full place-content-start overflow-hidden 
+     w-full place-content-start overflow-hidden  pb-40
     bg-gradient-to-r from-yellow-50 to-amber-500 '>
-            
          { 
-            womenProduct.map(pro=>(
+            JeweleryProduct.map(pro=>(
                 <div key={pro.id} className='
                 flex flex-col justify-start items-center  
                  mt-4 
@@ -47,12 +46,11 @@ const WomenProducts = () => {
                           </Link>
                           </div>
                        <div className='flex justify-end items-center'>
-                          <span className='text-xl font-medium '>${pro.price}</span>
+                          <span className='text-xl font-medium'>${pro.price}</span>
                        </div>   
-                     </div>  
-                          
-                        <div className='flex justify-center items-center mx-auto w-full h-16'>
-                        <button onClick={()=>addtocart(pro)} className=' w-52 rounded-sm bg-black text-white 
+                        </div>                         
+                         <div className='flex justify-center items-center mx-auto w-full h-16'>
+                            <button onClick={()=>addtocart(pro)} className=' w-52 rounded-sm bg-black text-white 
                            h-10 hover:opacity-50 cursor-pointer mt-auto
                          '>Add To Cart</button>
                         </div>
@@ -64,4 +62,4 @@ const WomenProducts = () => {
   )
 }
 
-export default WomenProducts
+export default MenProducts
