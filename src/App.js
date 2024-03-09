@@ -13,7 +13,7 @@ import ElectronicProducts from './pages/ElectronicProducts'
 import JeweleryProducts from './pages/JeweleryProducts'
 function App() {
   return (
-    <div className="flex flex-grow flex-col justify-center items-center min-h-screen">
+    <div className="flex flex-grow flex-col justify-center items-center min-h-screen ">
          <Header />
          {/* <Sidebar /> */}
             <Routes>
