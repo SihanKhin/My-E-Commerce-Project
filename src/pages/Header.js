@@ -15,8 +15,8 @@ const Header = () => {
   return (
     <>
     <header className=' h-20 sticky mt-0 w-full fixed top-0 z-50
-    bg-gradient-to-r from-stone-50 to-amber-300
-    flex flex-row justify-between items-center'>
+        bg-gradient-to-r from-stone-50 to-amber-300
+        flex flex-row justify-between items-center'>
          <section className='flex flex-1 ml-5'>
             <nav className='w-32 md:w-40 ml-10  md:ml-20'>
                 <h1 className='text-3xl font-myfont font-medium text-black'>Men &
@@ -43,7 +43,7 @@ const Header = () => {
                      <button
                    // ​​ onMouseEnter={handleOpen}
                       /* onMouseLeave={handleOpen} */
-                       onClick={handleOpen} 
+                        onClick={handleOpen}
                      className='flex flex-row justify-between items-center'>
                          <span className='ml-1 font-Roboto text-xl'>Products</span>
                           <svg className={  `h-3 transition-transform duration-300 ${svg}`} xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" class="w-6 h-6">
