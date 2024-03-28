@@ -4,7 +4,7 @@ import axios from "axios";
 
 const initialState = {
     products: [],
-    cart: []
+    cart: JSON.parse(localStorage.getItem('cart')) || []
 }
 const PRO_URL = 'https://fakestoreapi.com/products';
 export const fetchProducts = createAsyncThunk('products/fetchProducts',async()=>{
@@ -76,6 +76,7 @@ const  productSlice = createSlice({
               }else {
                 state.cart.unshift({...state.products.find(pro=>pro.id === id),quantity:1});
               }
+              localStorage.setItem('cart',JSON.stringify(state.cart))
 
         })
         .addCase(deleteAddToCart.fulfilled,(state,action)=>{
@@ -97,9 +98,11 @@ const  productSlice = createSlice({
                  /*   existionProduct.quantity++;
                   state.cart = state.cart.filter(pro=>pro.id !== id) */; 
               }
+              localStorage.setItem('cart',JSON.stringify(state.cart))
         })
         .addCase(deleteAllProduct.fulfilled,(state,action)=>{
             state.cart = state.cart.filter(pro=>pro.id !== action.payload)
+            localStorage.setItem('cart',JSON.stringify(state.cart))
         })
       
     }

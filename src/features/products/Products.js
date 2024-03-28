@@ -25,14 +25,6 @@ const Products = () => {
     } */
     const addtocart = ({id,title,image,price,quantity})=>{
          dispatch(addToCart( {id:id,title:title,image:image,price:price,quantity:quantity}));  
-         console.log('added to cart.')
-           setMessage({id:id,title:title,image:image,price:price,quantity:quantity})
-                
-           
-       // innerDisplay()
-        setTimeout(()=>{
-               setMessage(null);
-        },1000) 
     }
   return (
 
@@ -69,8 +61,7 @@ const Products = () => {
                        <div className='flex justify-end items-center'>
                           <span className='text-xl font-medium '>${pro.price}</span>
                        </div>   
-                     </div>  
-{message && message.id === pro.id && <p className='text-base font-Roboto font-medium mt-4'>✅added to cart</p>} 
+                     </div>   
                         <div className='flex justify-center items-center mx-auto w-full h-16'>
                         <button onClick={()=>addtocart(pro)} className=' w-52 rounded-sm bg-black text-white 
                            h-10 hover:opacity-50 cursor-pointer mt-auto
